@@ -7,7 +7,8 @@ Two players play n consecutive rounds. In each round they can either betray the 
 
 Building
 ========
-As of now there is only build script for linux. 
+As of now there is only build script for linux.
+Note that hte build script uses `g++`
 To build just do:
 ```bash
 git clone https://github.com/saladwithgrass/prisoners-dilemma
