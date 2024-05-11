@@ -56,9 +56,11 @@ void print_tables() {
 int main() {
     // create players
     Tit_For_Tat t4t(player1_table, player2_table);
-    Tester tester(player2_table, player1_table);
-    Generic_Player* p1 = dynamic_cast<Generic_Player*>(&t4t);
-    Generic_Player* p2 = dynamic_cast<Generic_Player*>(&tester);
+    Tester tester(player2_table, player2_table);
+    Win_Stay_Lose_Shift wsls(player2_table, player1_table);
+    Random random(player1_table, player2_table);
+    Generic_Player* p1 = dynamic_cast<Generic_Player*>(&random);
+    Generic_Player* p2 = dynamic_cast<Generic_Player*>(&wsls);
     for (int i = 0; i < ROUNDS; ++i) {
         round(p1, p2);
     }

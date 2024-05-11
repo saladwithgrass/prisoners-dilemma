@@ -28,13 +28,13 @@ protected:
     // different strategies need a different amount of 
     // previous results so count tells how far into the 
     // past we look
-    bool get_others_previous_result(int count = 0) {
+    bool get_others_previous_result(int count = 1) {
         if (count > current_round)
             throw std::out_of_range("trying to get nonexistent result");
         return other_table[current_round - count];
     };
 
-    bool get_self_previous_result(int count = 0) {
+    bool get_self_previous_result(int count = 1) {
         if (count > current_round)
             throw std::out_of_range("trying to get nonexistent result");
         return self_table[current_round - count];
