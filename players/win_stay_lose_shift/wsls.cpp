@@ -1,7 +1,9 @@
 #include "wsls.h"
 
 Win_Stay_Lose_Shift::Win_Stay_Lose_Shift(bool*self_table_init, bool* other_table_init) :
-                     Generic_Player(self_table_init, other_table_init) {}
+                     Generic_Player(self_table_init, other_table_init) {
+                        name = "win stay lose shift";
+                     }
 
 bool Win_Stay_Lose_Shift::select() {
     if (current_round == 0) 

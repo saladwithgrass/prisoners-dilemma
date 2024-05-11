@@ -17,6 +17,18 @@ public:
         current_round++;
         score += points;
     }
+    void reset() {
+        score = 0; 
+        current_round = 0;
+    }
+
+    int get_score() {
+        return score;
+    }
+
+    char const* get_name() {
+        return name;
+    }
 
 protected:
 
@@ -53,4 +65,5 @@ protected:
 
     // previous choices of the other player
     bool* other_table;
+    char const* name;
 };

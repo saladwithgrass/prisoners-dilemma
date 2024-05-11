@@ -4,6 +4,7 @@
 Tester::Tester(bool* self_table_init, bool* other_table_init) : 
             Generic_Player(self_table_init, other_table_init) {
                 can_opponent_retaliate = 0;
+                name = "tester";
             }
 
 bool Tester::select() {
